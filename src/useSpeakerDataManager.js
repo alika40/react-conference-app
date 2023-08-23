@@ -4,7 +4,16 @@ import axios from "axios";
 
 
 const useSpeakerDataManager = () => {
-    const [{isLoading, speakerList}, dispatch] = useReducer(speakerReducer, {isLoading: true, speakerList: []});
+    const [{isLoading, speakerList, favoriteClickCount }, dispatch] = useReducer(
+                                                                speakerReducer,
+                                                                {
+                                                                    isLoading: true,
+                                                                    speakerList: [],
+                                                                    favoriteClickCount: 10
+                                                                }
+                                                            );
+
+    const incrementFavoriteClickCount = () => dispatch({type: "incrementFavoriteClickCount"});
 
     const toggleSpeakerFavorite = (speakerRec) => {
         const updateData = async () => {
@@ -26,7 +35,7 @@ const useSpeakerDataManager = () => {
         return () => console.log("Cleanup!!!");
     }, []);
 
-    return {isLoading, speakerList, toggleSpeakerFavorite};
+    return {isLoading, speakerList, favoriteClickCount, incrementFavoriteClickCount, toggleSpeakerFavorite};
 };
 
 export default useSpeakerDataManager;

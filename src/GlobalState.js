@@ -7,8 +7,6 @@ export const GlobalContext = React.createContext();
 
 export const GlobalProvider = ({children}) => {
 
-    // const {isLoading, speakerList, toggleSpeakerFavorite} = useSpeakerDataManager();
-    // const provider = {isLoading, speakerList, toggleSpeakerFavorite };
     const {
         isLoading,
         speakerList,
