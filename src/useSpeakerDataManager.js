@@ -1,5 +1,4 @@
 import { useEffect, useReducer } from "react";
-import speakerData from "./speakerData";
 import speakerReducer from "./SpeakerReducer";
 import axios from "axios";
 
@@ -18,8 +17,6 @@ const useSpeakerDataManager = () => {
     };
 
     useEffect(() => {
-        // new Promise((resolve) => setTimeout(() => resolve(), 100))
-        // .then(() => dispatch({ type: "setSpeakerList", data: speakerData}) );
         const fetchedData = async () => {
             let result = await axios.get("/api/speakers");
             dispatch({ type: "setSpeakerList", data: result.data});
