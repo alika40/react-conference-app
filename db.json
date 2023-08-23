@@ -49,7 +49,7 @@
       "id": 1269,
       "firstName": "Arun",
       "lastName": "Gupta",
-      "favorite": true,
+      "favorite": false,
       "bio": "Arun Gupta is a Principal Open Source Technologist at Amazon Web Services. He has built and led developer communities for 12+ years at Sun, Oracle, Red Hat and Couchbase.",
       "sat": false,
       "sun": true
@@ -127,4 +127,4 @@
       "bio": "Steve works at SpeedCurve on the interplay between performance and design. He previously served as Google's Head Performance Engineer, Chief Performance Yahoo!, and Chief Performance Officer at Fastly."
     }
   ]
-}}
+}
