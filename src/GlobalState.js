@@ -6,21 +6,28 @@ export const GlobalContext = React.createContext();
 
 
 export const GlobalProvider = ({children}) => {
-
     const {
+        error,
+        hasError,
         isLoading,
         speakerList,
         favoriteClickCount,
         toggleSpeakerFavorite,
         incrementFavoriteClickCount,
+        forceImageRerender,
+        imageRerenderIdentifier
       } = useSpeakerDataManager();
     
       const provider = {
+        error,
+        hasError,
         isLoading,
         speakerList,
         favoriteClickCount,
         toggleSpeakerFavorite,
         incrementFavoriteClickCount,
+        forceImageRerender,
+        imageRerenderIdentifier  
       };
 
     return (

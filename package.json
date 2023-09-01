@@ -1,7 +1,6 @@
 {
   "name": "conference-app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,5 +22,14 @@
     "eslint": "^7.22.0",
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "4.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alika40/react-conference-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alika40/react-conference-app/issues"
+  },
+  "homepage": "https://github.com/alika40/react-conference-app#readme",
+  "description": ""
 }

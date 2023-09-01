@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import SignMeUp from "./SignMeUp";
+import { GlobalContext } from "./GlobalState";
 
 
 export const Header = () => {
     const signupCallback = (email) => console.log(`Sign up called with email ${email}`); 
+    const {favoriteClickCount} = useContext(GlobalContext);
+
     return (
         <div className="jumbotron jumbotronheight">
             <div className="row">
                 <div className="col-12 col-sm-4 text-left">
                     <h6 className="text-uppercase">October 19-20 2019</h6>
                     <h6 className="text-uppercase"> San Jose, California.</h6>
+                    <h5></h5>
+                    <h3>Click Count: {favoriteClickCount}</h3>
                 </div>
                 <div className="col-12 col-sm-8 text-lg-right">
                     <div>

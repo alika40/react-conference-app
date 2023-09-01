@@ -20,11 +20,20 @@ const Speakers = () => {
     const {
         isLoading,
         speakerList,
-        toggleSpeakerFavorite
+        toggleSpeakerFavorite,
+        hasError,
+        error,
+        forceImageRerender
     } = useContext(GlobalContext);
     
-    const handleChangeSaturday = () => setSpeakingSaturday(!speakingSaturday);
-    const handleChangeSunday = () => setSpeakingSunday(!speakingSunday);
+    const handleChangeSaturday = () => {
+                forceImageRerender();
+                setSpeakingSaturday(!speakingSaturday);
+            };
+    const handleChangeSunday = () => {
+                forceImageRerender();
+                setSpeakingSunday(!speakingSunday);
+            };
 
     const newSpeakerList = useMemo(// Use useMemo to cache value from complex computation for performance optimization
         () => speakerList
@@ -42,6 +51,8 @@ const Speakers = () => {
         e.preventDefault();
         toggleSpeakerFavorite(speakerRec);
     }, []);
+
+    if(hasError === true) return <div>Error: {error.message}</div>;
 
     if(isLoading) return <div>Laoding....</div>;
     
